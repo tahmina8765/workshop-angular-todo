@@ -1,2 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+// @import '../node_modules/bootstrap/scss/bootstrap.scss';
+// "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+// @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+// @import '@angular/material/prebuilt-themes/purple-green.css';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+// @import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.container{
+    padding: 0 15px;
+}
+
+
+.backgroundLines{
+    margin: 0 24px;
+    height: 400px;
+    background: repeating-linear-gradient(
+        0deg,
+        #ffffff 0px,
+        #ffffff 49px,
+        #e5e5e5 50px,
+        #e5e5e5 0px,
+      );
+    background-size: 100% 53px;
+    // border-top: 1px solid #e5e5e5;
+    display: block;
+}

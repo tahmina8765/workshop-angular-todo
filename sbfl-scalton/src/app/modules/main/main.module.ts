@@ -10,7 +10,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     MainRoutingModule,
-    SharedModule
+    SharedModule,
   ],
   exports: [HomeComponent]
 })

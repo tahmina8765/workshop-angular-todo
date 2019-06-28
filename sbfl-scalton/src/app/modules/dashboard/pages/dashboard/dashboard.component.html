@@ -1,15 +1,20 @@
+<!-- <app-navigation></app-navigation> -->
 <h1>Tasks...</h1>
 
 <ul>
     <li *ngFor="let item of todoList">
+            <mat-checkbox checked="false">
+                    {{item.title}}
+                  </mat-checkbox>
         <s *ngIf="item.status">{{ item.title }}</s>
         <b *ngIf="!item.status">{{ item.title }}</b>
     </li>
 </ul>
 
 {{ title }}
-<br>
-<br>
+
 <input type="text" name="title" [(ngModel)]="title">
 
 <button (click)="submitForm()">Submit</button>
+
+<div class="backgroundLines"></div>

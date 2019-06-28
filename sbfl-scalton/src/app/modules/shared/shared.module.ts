@@ -2,14 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SharedRoutingModule } from './shared-routing.module';
-import { MenuComponent } from './components/menu/menu.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MaterialsModule } from '../utills/materials/materials.module';
+import { TopMenuComponent } from './components/top-menu/top-menu.component';
 
 @NgModule({
-  declarations: [MenuComponent],
+  declarations: [TopMenuComponent],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    SharedRoutingModule,
+    MaterialsModule,
+    LayoutModule,
   ],
-  exports: [MenuComponent]
+  exports: [TopMenuComponent]
 })
 export class SharedModule { }
