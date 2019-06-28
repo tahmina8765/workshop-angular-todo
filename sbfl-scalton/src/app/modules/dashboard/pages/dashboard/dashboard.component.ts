@@ -9,7 +9,7 @@ import { TodoModel } from '../../models/todo.model';
 export class DashboardComponent implements OnInit {
 
   title: string;
-  todoList: TodoModel[] = [
+  todoList: Array<TodoModel> = [
     {
       title: 'Create an angular app',
       status: true
@@ -32,8 +32,8 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm(){
-    let todo: TodoModel = {title: this.title, status: false};
+  submitForm() {
+    const todo: TodoModel = {title: this.title, status: false};
     this.todoList.push(todo);
   }
 }
