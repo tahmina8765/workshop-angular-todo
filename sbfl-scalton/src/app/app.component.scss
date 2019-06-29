@@ -7,11 +7,8 @@
 }
 
 .todo-sidenav {
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  padding-right: 30px; 
   width: 250px;
-  // background: #f4f4f4;
-  // border-right: 1px solid #eaeaea;
+  mat-icon{
+    margin-right: 15px;
+  }
 }

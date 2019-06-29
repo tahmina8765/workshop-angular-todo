@@ -1,20 +1,31 @@
 <!-- <app-navigation></app-navigation> -->
 <h1>Tasks...</h1>
 
-<ul>
-    <li *ngFor="let item of todoList">
-            <mat-checkbox checked="false">
-                    {{item.title}}
-                  </mat-checkbox>
-        <s *ngIf="item.status">{{ item.title }}</s>
-        <b *ngIf="!item.status">{{ item.title }}</b>
-    </li>
-</ul>
+<mat-list>
+    <mat-list-item *ngFor="let item of todoList">
+        <mat-checkbox [checked]="item.status" [value]="item.status" [id]="item.id"
+            (change)="onStatusChange(item, $event)">
+            <s *ngIf="item.status">{{ item.title }}</s>
+            <span *ngIf="!item.status">{{ item.title }}</span>
+        </mat-checkbox>
 
-{{ title }}
+        <button mat-icon-button matPrefix (click)="onImportantChange(item)" [attr.aria-label]="'Important'">
+            <mat-icon>{{ item.isImportant ? 'star' : 'star_border'}}</mat-icon>
+        </button>
+
+    </mat-list-item>
+</mat-list>
+
+
+<app-template-todo-form></app-template-todo-form>
+
+<!-- <button mat-icon-button matPrefix (click)="submitForm()" [attr.aria-label]="'Save'">
+                <mat-icon>{{ hide ? 'check_box_outline_blank' : 'add'}}</mat-icon>
+            </button> -->
+
+
+<!-- {{ title }}
 
 <input type="text" name="title" [(ngModel)]="title">
 
-<button (click)="submitForm()">Submit</button>
-
-<div class="backgroundLines"></div>
+<button (click)="submitForm()">Submit</button> -->

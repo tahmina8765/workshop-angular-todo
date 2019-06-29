@@ -1,0 +1,10 @@
+<form>
+    <div class="todo-container">
+        <mat-form-field>
+            <input matInput #newtask placeholder="Add a task" type="text" name="title">
+            <button mat-button matSuffix (click)="submitTemplateForm(newtask)" [attr.aria-label]="'Save'" type="submit">
+                SAVE
+            </button>
+        </mat-form-field>
+    </div>
+</form>

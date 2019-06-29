@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { slideInAnimation } from './animations';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,25 +17,24 @@ export class AppComponent {
     {
       title: "Today",
       icon: "today",
-      routerLink: ['/']
+      routerLink: ['/dashboard/today']
     },
     {
       title: "Important",
       icon: "grade",
-      routerLink: ['/dashboard']
+      routerLink: ['/dashboard/important']
     },
     {
       title: "Planned",
       icon: "event",
-      routerLink: ['/']
+      routerLink: ['/dashboard/planned']
     },
     {
       title: "Tasks",
       icon: "home",
-      routerLink: ['/']
+      routerLink: ['/dashboard']
     }
   ]
-
 
   constructor() {
     
